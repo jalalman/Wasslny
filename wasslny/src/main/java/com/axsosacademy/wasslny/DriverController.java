@@ -1,6 +1,6 @@
 package com.axsosacademy.wasslny;
 
-import java.time.LocalDate;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.axsosacademy.wasslny.models.Driver;
-import com.axsosacademy.wasslny.models.Passenger;
+
 import com.axsosacademy.wasslny.models.Trip;
 import com.axsosacademy.wasslny.services.DriverService;
 import com.axsosacademy.wasslny.services.TripService;

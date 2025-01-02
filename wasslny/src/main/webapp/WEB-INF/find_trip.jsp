@@ -76,7 +76,7 @@
                         <div class="row g-3">
                             <div class="col-md-4">
                                 <div class="form-floating">
-                                    <select name="startPoint" class="form-select" id="startingPoint">
+                                    <select name="startingPoint" class="form-select" id="startingPoint">
                                         <option value="">Select starting point</option>
                                         <option value="Ramallah">Ramallah</option>
                                         <option value="Nablus">Nablus</option>
@@ -95,7 +95,7 @@
                                         <option value="Deir al-Balah">Deir al-Balah</option>
                                         <option value="Beit Lahia">Beit Lahia</option>
                                     </select>
-                                    <label for="startPoint">From</label>
+                                    <label for="startingPoint">From</label>
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -164,6 +164,7 @@
                             </thead>
                             <tbody>
                                 <c:forEach var="trip" items="${trips}">
+                                    <c:if test="${not trip.getPassengers().contains(passenger)}">
                                     <tr>
                                         <td>
 
@@ -205,6 +206,7 @@
                                             </form>
                                         </td>
                                     </tr>
+                                    </c:if>
                                 </c:forEach>
                             </tbody>
                         </table>

@@ -74,7 +74,7 @@
                     </div>
                 </div>
             </c:if>
-            
+
             <!-- Active Trips Section -->
             <div class="card mb-4">
                 <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
@@ -101,6 +101,7 @@
                                     <c:if test="${trip.status == 'Planned'}">
                                         <tr>
                                             <td>
+                                                <i class="bi bi-signpost-2"></i>
                                                 <a href="/driver/trips/${trip.id}" class="text-decoration-none">
                                                     ${trip.title}
                                                 </a>
@@ -174,6 +175,7 @@
                                     <c:if test="${trip.status == 'Departed'}">
                                         <tr>
                                             <td>
+                                                <i class="bi bi-signpost-2"></i>
                                                 <a href="/driver/trips/${trip.id}" class="text-decoration-none">
                                                     ${trip.title}
                                                 </a>
@@ -185,6 +187,7 @@
                                                 </small>
                                             </td>
                                             <td>
+                                                <i class="bi bi-check-circle"></i>
                                                 <span class="badge bg-success">${trip.status}</span>
                                             </td>
                                             <td>

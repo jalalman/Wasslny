@@ -18,6 +18,7 @@ import com.axsosacademy.wasslny.models.Passenger;
 import com.axsosacademy.wasslny.models.Trip;
 import com.axsosacademy.wasslny.models.User;
 import com.axsosacademy.wasslny.services.TripService;
+import com.axsosacademy.wasslny.services.PassengerService;
 
 import jakarta.servlet.http.HttpSession;
 
@@ -25,6 +26,9 @@ import jakarta.servlet.http.HttpSession;
 public class PassengerController {
     @Autowired
 	TripService tripService;
+
+    @Autowired
+    PassengerService passengerService;
 
     @GetMapping("/passenger/dashboard")
     public String passengerDashboard(HttpSession session, Model model) {
@@ -60,6 +64,9 @@ public class PassengerController {
             departureTime,
             passengerCount
         );
+        Passenger passenger = (Passenger) session.getAttribute("loggedUser");
+        Long passengerId = passenger.getId();
+        model.addAttribute("passenger", passengerService.findById(passengerId));
         model.addAttribute("trips", searchResults);
         return "find_trip.jsp";
     }

@@ -145,8 +145,12 @@
                                         <td>
                                             <i class="bi bi-person"></i> ${passenger.firstName} ${passenger.lastName}
                                         </td>
-                                        <td>${trip.passengerCountMap[passenger.id]}</td>
-                                        <td>${passenger.phoneNumber}</td>
+                                        <td>
+                                            <i class="bi bi-person-plus"></i>
+                                            ${trip.passengerCountMap[passenger.id]}</td>
+                                        <td>
+                                            <i class="bi bi-telephone"></i>
+                                            ${passenger.phoneNumber}</td>
                                         <td>
                                             <small class="text-muted">
                                                 ${trip.passengerNotes[passenger.id] != null ? trip.passengerNotes[passenger.id] : "No notes available"}
