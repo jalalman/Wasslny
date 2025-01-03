@@ -9,7 +9,7 @@ Wasslny (which means "give me a ride" in Arabic) is a web-based platform that co
 A Spring Boot web application that connects passengers with drivers for ride sharing in Palestine.
 
 ## Authors
--   Jalal hemmo - Full Stack Developer
+- Jalal hemmo - Full Stack Developer
   - GitHub: [@jalalman](https://github.com/jalalman)
   - LinkedIn: [Jalal hemmo](https://www.linkedin.com/in/jalal-hemmo/)
 
