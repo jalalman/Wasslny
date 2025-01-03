@@ -38,7 +38,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="https://jalaltest.my.canva.site/wasslny">
 
                 Wasslny
             </a>
@@ -47,9 +47,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-house-door"></i> Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-info-circle"></i> About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-telephone"></i> Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://jalaltest.my.canva.site/wasslny"><i class="bi bi-house-door"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://jalaltest.my.canva.site/wasslny#page-0"><i class="bi bi-info-circle"></i> About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://jalaltest.my.canva.site/wasslny#page-2"><i class="bi bi-telephone"></i> Contact</a></li>
                 </ul>
             </div>
         </div>
