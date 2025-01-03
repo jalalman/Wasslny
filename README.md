@@ -1,7 +1,8 @@
 # Wasslny - Ride Sharing Application
+<img src="https://i.ibb.co/BqZcZGf/icon-Copy.png" width="200" alt="Wasslny Logo">
 
 ![Wasslny Logo](./css/imgs/icon.png)
-<img src="./css/imgs/icon.png" width="200" alt="Wasslny Logo">
+<img src="![./css/imgs/icon.png](https://i.ibb.co/BqZcZGf/icon-Copy.png)" width="200" alt="Wasslny Logo">
 ![Wasslny Logo](/css/imgs/icon.png)
 ## Overview
 Wasslny (which means "give me a ride" in Arabic) is a web-based platform that connects passengers with drivers for ride sharing in Palestine.
