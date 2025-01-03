@@ -14,24 +14,64 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         .sidebar {
-            min-height: 100vh;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 280px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            transition: transform 0.3s ease-in-out;
+            z-index: 1000;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
         }
-        .nav-link {
-            color: #333;
-            padding: 0.8rem 1rem;
-            margin: 0.2rem 0;
-            border-radius: 0.5rem;
+
+        .sidebar.collapsed {
+            transform: translateX(-280px);
         }
-        .nav-link:hover, .nav-link.active {
-            background-color: #f8f9fa;
-            color: #0d6efd;
-        }
+
         .main-content {
             margin-left: 280px;
-            padding: 2rem;
+            padding: 20px;
+            transition: margin-left 0.3s ease-in-out;
         }
+
+        .main-content.expanded {
+            margin-left: 0;
+        }
+
+        #sidebarToggle {
+            position: fixed;
+            margin-right: 30px;
+            left: 20px;
+            top: 20px;
+            z-index: 1002;
+            background: rgb(255, 255, 255);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #dee2e6;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .sidebar:not(.collapsed) + #sidebarToggle {
+            left: 240px;
+        }
+        #sidebarToggle:hover {
+        background-color: #444;
+        color: white;
+        border: 1px solid #444;
+    }
+
         @media (max-width: 768px) {
+            #sidebarToggle {
+                left: 20px;
+            }
+            .sidebar {
+                transform: translateX(-280px);
+            }
             .main-content {
                 margin-left: 0;
             }
@@ -39,9 +79,12 @@
     </style>
 </head>
 <body>
+
     <div class="d-flex">
+
+
         <!-- Sidebar -->
-        <div class="sidebar bg-white p-4 position-fixed" style="width: 280px;">
+        <div class="sidebar bg-white p-4">
             <div class="text-center mb-4">
                 <img src="/css/imgs/icon.png" alt="Profile" class="rounded-circle mb-3" width="100">
                 <h5 class="mb-0">${loggedUser.firstName} ${loggedUser.lastName}</h5>
@@ -63,7 +106,9 @@
                 </a>
             </nav>
         </div>
-
+        <button id="sidebarToggle" class="btn btn-light border ">
+            <i class="bi bi-list"></i>
+        </button>
         <!-- Main Content -->
         <div class="main-content flex-grow-1">
             <!-- Upcoming Trips Section -->
@@ -204,6 +249,13 @@
             </div>
         </div>
     </div>
+    <script>
+        document.getElementById('sidebarToggle').addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.toggle('collapsed');
+            document.querySelector('.main-content').classList.toggle('expanded');
+            this.classList.toggle('collapsed');
+        });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
