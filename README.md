@@ -1,4 +1,4 @@
-# Wasslny - Ride Sharing Application
+# Wasslny - Taxi Reservation Application
 <img src="https://i.ibb.co/BqZcZGf/icon-Copy.png" width="200" alt="Wasslny Logo">
 
 
