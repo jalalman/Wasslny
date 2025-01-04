@@ -52,7 +52,7 @@ public class PassengerController {
     public String findTrips(HttpSession session,
                             @RequestParam(value = "startingPoint", required = false) String startingPoint,
                             @RequestParam(value = "destination", required = false) String destination,
-                            @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime departureTime,
+                            @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate departureTime,
                             @RequestParam(value = "passengerCount", required = false, defaultValue = "1") int passengerCount,
                             Model model) {
         if (session.getAttribute("loggedUser") == null) {

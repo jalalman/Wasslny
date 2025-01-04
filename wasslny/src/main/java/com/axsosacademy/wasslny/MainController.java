@@ -26,7 +26,11 @@ public class MainController {
     public MainController(UserService userService) {
         this.userService = userService;
     }
-
+    @GetMapping("/landingpage")
+    public String landingpage() {
+        return "landingpage.jsp";
+    }
+    
     @GetMapping("/")
     public String index(Model model) {
         model.addAttribute("newUser", new RegistrationForm());
@@ -132,7 +136,7 @@ public class MainController {
 
 
     @PostMapping("/user/profile/edit/driver")
-    public String updateDriverProfile(@Valid @ModelAttribute("profileForm") UserProfileUpdateDTO profileForm, 
+    public String updateDriverProfile(@Valid @ModelAttribute("profileForm") UserProfileUpdateDTO profileForm,
                                     BindingResult result, HttpSession session, Model model) {
         if (result.hasErrors()) {
         	model.addAttribute("passwordForm", new PasswordForm());
@@ -145,7 +149,7 @@ public class MainController {
         originalDriver.setEmail(profileForm.getEmail());
         originalDriver.setPhoneNumber(profileForm.getPhoneNumber());
         originalDriver.setLocation(profileForm.getLocation());
-        
+
         try {
             userService.updateUserProfile(originalDriver);
             session.setAttribute("loggedUser", originalDriver);
@@ -158,7 +162,7 @@ public class MainController {
     }
 
     @PostMapping("/user/profile/edit/passenger")
-    public String updatePassengerProfile(@Valid @ModelAttribute("profileForm") UserProfileUpdateDTO profileForm, 
+    public String updatePassengerProfile(@Valid @ModelAttribute("profileForm") UserProfileUpdateDTO profileForm,
                                     BindingResult result, HttpSession session, Model model) {
         if (result.hasErrors()) {
         	model.addAttribute("passwordForm", new PasswordForm());
@@ -171,7 +175,7 @@ public class MainController {
         originalPassenger.setEmail(profileForm.getEmail());
         originalPassenger.setPhoneNumber(profileForm.getPhoneNumber());
         originalPassenger.setLocation(profileForm.getLocation());
-        
+
         try {
             userService.updateUserProfile(originalPassenger);
             session.setAttribute("loggedUser", originalPassenger);
@@ -182,22 +186,22 @@ public class MainController {
 
         return "redirect:/passenger/dashboard";
     }
-    
+
     @PostMapping("/user/password/update")
     public String updatePassword(@Valid @ModelAttribute("passwordForm") PasswordForm passwordForm,
                                BindingResult result, HttpSession session, Model model, RedirectAttributes redirectAttributes) {
         User loggedUser = (User) session.getAttribute("loggedUser");
-        
+
         // Verify current password
         if (!userService.checkPassword(loggedUser.getId(), passwordForm.getCurrentPassword())) {
             result.rejectValue("currentPassword", "Invalid", "Current password is incorrect");
         }
-        
+
         // Check if new password matches confirmation
         if (!passwordForm.getNewPassword().equals(passwordForm.getConfirmPassword())) {
             result.rejectValue("confirmPassword", "Matches", "New passwords do not match");
         }
-        
+
         if (result.hasErrors()) {
             // Repopulate the profile form
             UserProfileUpdateDTO profileForm = new UserProfileUpdateDTO();
@@ -206,10 +210,10 @@ public class MainController {
             profileForm.setEmail(loggedUser.getEmail());
             profileForm.setPhoneNumber(loggedUser.getPhoneNumber());
             profileForm.setLocation(loggedUser.getLocation());
-            
+
             model.addAttribute("profileForm", profileForm);
             model.addAttribute("loggedUser", loggedUser);
-            
+
             // Return to the appropriate edit profile page
             if (loggedUser instanceof Driver) {
                 return "driver_edit_profile.jsp";

@@ -28,7 +28,7 @@ public interface TripRepository extends CrudRepository<Trip, Long> {
     List<Trip> searchTrips(
         @Param("startPoint") String startPoint,
         @Param("destination") String destination,
-        @Param("departureTime") LocalDateTime departureTime,
+        @Param("departureTime") LocalDate departureTime,
         @Param("passengerCount") int passengerCount
     );
 

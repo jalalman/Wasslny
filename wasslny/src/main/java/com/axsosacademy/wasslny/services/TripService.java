@@ -70,7 +70,7 @@ public class TripService {
     }
 
 
-    public List<Trip> searchTrips(String startPoint, String destination, LocalDateTime departureTime, int passengerCount) {
+    public List<Trip> searchTrips(String startPoint, String destination, LocalDate departureTime, int passengerCount) {
         return tripRepository.searchTrips(
             startPoint.trim().isEmpty() ? null : startPoint,
             destination.trim().isEmpty() ? null : destination,

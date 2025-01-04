@@ -125,7 +125,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="form-floating">
-                                    <input type="datetime-local" class="form-control" id="departureTime" name="departureTime">
+                                    <input type="date" class="form-control" id="departureTime" name="departureTime">
                                     <label for="departureTime">Departure Time</label>
                                 </div>
                             </div>
