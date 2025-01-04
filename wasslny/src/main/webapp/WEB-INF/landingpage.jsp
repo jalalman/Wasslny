@@ -37,10 +37,10 @@
 
 
         <div class="homePage" style="background-image: url('css/imgs/11.jpg');">
-
+            <div class="header">
             <div class="navBar">
 
-                <div class="circle"> <img src="css/imgs/logo.png" alt="logo" class="logo"></div>
+                <div class="circle"> <a href="/landingpage#homeBTN"><img src="css/imgs/logo.png" alt="logo" class="logo"></a></div>
 
                 <div class="links">
                     <a class="nav-link" href="/">Login</a>
@@ -57,6 +57,7 @@
                     <i class="fab fa-youtube"></i>
                 </div>
             </div>
+        </div>
                 <button href="/" class="custom-btn" id="homeBTN">Get Started</button>
         </div>
 

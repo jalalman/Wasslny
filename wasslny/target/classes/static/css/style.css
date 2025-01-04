@@ -3,14 +3,14 @@
     margin: 0vh;
     padding: 0vh;
     font-family: "Poppins";
-   
+
     scroll-behavior: smooth;
 }
 
 .homePage{
 
     height: 100vh;
-
+    margin-top: 0;
     background-image: url('imgs/11.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -28,6 +28,7 @@
     position: fixed;
     z-index: 100;
     width: 100%;
+    align-items: center;
 
 }
 
@@ -294,7 +295,15 @@
 
 
 
+.header{
+   
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    height: 20vh;
+    padding-top: 20px;
 
+}
 
 
 
