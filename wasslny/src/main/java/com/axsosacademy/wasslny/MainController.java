@@ -30,7 +30,7 @@ public class MainController {
     public String landingpage() {
         return "landingpage.jsp";
     }
-    
+
     @GetMapping("/")
     public String index(Model model) {
         model.addAttribute("newUser", new RegistrationForm());
