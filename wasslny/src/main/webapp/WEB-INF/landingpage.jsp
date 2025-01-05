@@ -127,7 +127,7 @@
                     </div><br>
                     <div class="flex items-center space-x-2">
                         <i class="fas fa-user"></i>
-                        <span>yaser zogbi</span>
+                        <span>yaser zoubi</span>
                     </div>
                     <div class="flex items-center space-x-2">
                         <i class="fas fa-envelope"></i>
