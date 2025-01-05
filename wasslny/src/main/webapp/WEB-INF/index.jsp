@@ -106,9 +106,9 @@
                             <div class="btn-group w-100" role="group">
                                 <input type="radio" class="btn-check" name="accountType" id="driver" value="Driver" required>
 
-                                <label class="btn btn-outline-primary" for="driver"><i class="bi bi-car-front"> </i> Driver</label>
+                                <label class="btn btn-outline-warning" for="driver"><i class="bi bi-car-front"> </i> Driver</label>
                                 <input type="radio" class="btn-check" name="accountType" id="passenger" value="Passenger">
-                                <label class="btn btn-outline-primary" for="passenger"><i class="bi bi-person"></i> Passenger</label>
+                                <label class="btn btn-outline-warning" for="passenger"><i class="bi bi-person"></i> Passenger</label>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-warning w-100">Register</button>
