@@ -40,7 +40,7 @@
             <div class="header">
             <div class="navBar">
 
-                <div class="circle"> <a href="/landingpage#homeBTN"><img src="css/imgs/logo.png" alt="logo" class="logo"></a></div>
+                <div class="circle"> <a href="/landingpage#loginPage"><img src="css/imgs/logo.png" alt="logo" class="logo"></a></div>
 
                 <div class="links">
                     <a class="nav-link" href="/">Login</a>

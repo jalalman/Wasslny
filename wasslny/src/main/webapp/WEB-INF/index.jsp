@@ -137,7 +137,7 @@
                         </div>
                         <button type="submit" class="btn btn-primary w-100 mb-3">Login</button>
                         <div class="text-center">
-                            <p class="text-muted">Or login with:</p>
+                            <p class="text-muted">Our Soical Media:</p>
                             <div class="d-flex justify-content-center gap-2">
                                 <button type="button" class="btn btn-outline-primary"><i class="bi bi-twitter"></i></button>
                                 <button type="button" class="btn btn-outline-primary"><i class="bi bi-facebook"></i></button>
