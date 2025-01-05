@@ -38,9 +38,10 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="/landingpage">
+            <a class="navbar-brand " href="/landingpage">
 
-                <img src="css/imgs/logo.png" alt="logo" class="logo " width="80" height="80">
+                <img src="css/imgs/logo.png" alt="logo" class="logo  " width="80" height="80">  
+                
                 Wasslny
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -110,7 +111,7 @@
                                 <label class="btn btn-outline-primary" for="passenger"><i class="bi bi-person"></i> Passenger</label>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100">Register</button>
+                        <button type="submit" class="btn btn-warning w-100">Register</button>
                     </form:form>
                 </div>
             </div>
@@ -135,14 +136,14 @@
                             <form:label path="password">Password</form:label>
                             <form:errors path="password" class="text-danger"/>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100 mb-3">Login</button>
+                        <button type="submit" class="btn btn-warning w-100 mb-3">Login</button>
                         <div class="text-center">
                             <p class="text-muted">Our Soical Media:</p>
                             <div class="d-flex justify-content-center gap-2">
-                                <button type="button" class="btn btn-outline-primary"><i class="bi bi-twitter"></i></button>
-                                <button type="button" class="btn btn-outline-primary"><i class="bi bi-facebook"></i></button>
-                                <button type="button" class="btn btn-outline-primary"><i class="bi bi-youtube"></i></button>
-                                <button type="button" class="btn btn-outline-primary"><i class="bi bi-instagram"></i></button>
+                                <button type="button" class="btn btn-outline-warning"><i class="bi bi-twitter"></i></button>
+                                <button type="button" class="btn btn-outline-warning"><i class="bi bi-facebook"></i></button>
+                                <button type="button" class="btn btn-outline-warning"><i class="bi bi-youtube"></i></button>
+                                <button type="button" class="btn btn-outline-warning"><i class="bi bi-instagram"></i></button>
 
                             </div>
                         </div>
